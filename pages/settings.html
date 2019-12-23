@@ -9,73 +9,408 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
     <title>Jotno His</title>
 </head>
 
-<body>
-    <div class="container-fluid p-0">
-        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar jotno-nav">
-            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
-                <img src="../images/logo-solid.jpg" class="img-responsive rounded" alt="jotno logo" width="30"
-                    height="30">
-            </a>
-
-            <div class="navbar-nav-scroll">
-                <ul class="navbar-nav bd-navbar-nav flex-row cool-link">
-                    <li class="nav-item">
-                        <a class="nav-link " href="dashboard.html">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="dashboard.html">All Organization</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="settings.html">Setting</a>
-                    </li>
-                </ul>
-            </div>
-
-            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                <li class="nav-item dropdown">
-                    <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Profile
+<body class="settingpage">
+    <div class="container-fluid pb-5 p-0">
+        <div class="row">
+            <div class="col-12">
+                <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar jotno-nav small pt-0 pb-1">
+                    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                        <img src="../images/logo-solid.jpg" class="img-responsive rounded" alt="jotno logo" width="30"
+                            height="30">
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-                        <a class="dropdown-item" href="/docs/4.1/">Profile</a>
-                        <a class="dropdown-item active" href="/docs/4.0/">Change Password</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Sign Out</a>
+        
+                    <div class="navbar-nav-scroll">
+                        <ul class="navbar-nav bd-navbar-nav flex-row cool-link">
+                            <li class="nav-item">
+                                <a class="nav-link " href="dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="dashboard.html">All Organization</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="settings.html">Setting</a>
+                            </li>
+                        </ul>
                     </div>
-                </li>
+        
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                        <li class="nav-item dropdown">
+                            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Profile
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                                <a class="dropdown-item" href="/docs/4.1/">Profile</a>
+                                <a class="dropdown-item active" href="/docs/4.0/">Change Password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Sign Out</a>
+                            </div>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a class="nav-link p-2">
+                                <img class="img-circle" src="../images/user logo.png" alt="" width="30" height="30">
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 content-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <!-- Vertical navbar -->
+                    <div class="col-md-3">
+                        <div class="vertical-nav" id="sidebar">
+                            <div class="py-4 px-3">
+                                <div class="media d-flex align-items-center">
+                                    <!-- <img src="../images/user logo.png" alt="..."
+                                        width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm"> -->
+                                    <div class="media-body">
+                                        <h4 class="m-0 h6 user-name">Md Khokanuzzaman</h4>
+                                        <p class="font-weight-light text-muted mb-0 small">Root User</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                <li class="nav-item">
-                    <a class="nav-link p-2">
-                        <img class="img-circle" src="../images/user logo.png" alt="" width="30" height="30">
-                    </a>
-                </li>
-            </ul>
-        </header>
-        <div class="settingWrapper">
-            <div class="container">
-                settingWrapper
+                            <ul class="nav flex-column mb-0">
+                                <!-- <li class="divider"></li> -->
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic bg-light">
+                                        <i class="fab fa-microsoft mr-3 text-primary fa-fw"></i>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic">
+                                        <i class="fas fa-hospital mr-3 text-primary fa-fw"></i>
+                                        Organization
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic">
+                                        <i class="fas fa-user-md mr-3 text-primary fa-fw"></i>
+                                        Doctor
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic">
+                                        <i class="fas fa-user mr-3 text-primary fa-fw"></i>
+                                        User Account
+                                    </a>
+                                </li>
+                                <!-- <li class="divider"></li> -->
+                            </ul>
+
+                            <ul class="nav flex-column mb-0">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic">
+                                        <i class="fas fa-cogs mr-3 text-primary fa-fw"></i>
+                                        Setup
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic">
+                                        <i class="fas fa-tasks mr-3 text-primary fa-fw"></i>
+                                        Suggestions
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic">
+                                        <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                                        Links
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark font-italic">
+                                        <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                                        Reports
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End vertical navbar -->
+
+                    <div class="col-md-9">
+                        <!-- Page content holder -->
+                        <div class="page-content small" id="content">
+                            <table id="table" class="custom-table" data-toggle="table" data-show-columns="true"
+                                data-multiple-select-row="true" data-click-to-select="true" data-pagination="true"
+                                data-search="true" data-show-refresh="true" data-side-pagination="server"
+                                data-buttons-align="left"
+                                data-show-fullscreen="true"
+                                data-detail-view="true"
+                                data-show-search-clear-button="true"
+                                data-detail-formatter="detailFormatter"
+                                data-show-search-button="true"
+                                data-buttons-class="info"
+                                data-buttons="btn btn-sm"
+                                data-show-export="true"
+                                data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
+                                <thead>
+                                    <tr>
+                                        <th data-field="state" data-checkbox="true"></th>
+                                        <th data-field="id" data-sortable="true">Code</th>
+                                        <th data-field="name" data-sortable="true">Name</th>
+                                        <th data-field="strength" data-sortable="true">Strength</th>
+                                        <th data-field="generic" data-sortable="true">Generic Name</th>
+                                        <th data-field="vendor" data-sortable="true">Vendor</th>
+                                        <th data-field="formation" data-sortable="true">Formation</th>
+                                        <th data-field="priority" data-sortable="true">Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Monas 4 OFT</td>
+                                        <td>4 mg</td>
+                                        <td>MONTELUKAST</td>
+                                        <td>ACME</td>
+                                        <td>FLASH TAB</td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="../js/jquery.slim.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/extensions/export/bootstrap-table-export.min.js"></script>
+    <script src="https://kit.fontawesome.com/64ff9609fa.js" crossorigin="anonymous"></script>
 
+    
     <script>
-
         $(document).ready(function () {
-            $('.navbar-nav .nav-link').click(function () {
-                $('.navbar-nav .nav-link').removeClass('active');
-                $(this).addClass('active');
-            })
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+
+            });
+
+            $('#sidebarCollapse').click(function () {
+                $('.toggleIcon').toggleClass("fa-chevron-left fa-chevron-right");
+            });
         });
+
     </script>
+    
 </body>
 
 </html>
